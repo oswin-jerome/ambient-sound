@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   isPlaying(){
     
     
-    
+    // FIXME:
 
     return assetsAudioPlayer.isPlaying.value;
   }
@@ -37,6 +37,9 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         child: PageView(
           children: <Widget>[
+            Sone(click: (s){
+              playAudio(s);
+            },isPlaying: isPlaying,pause: pauseAudio,),
             Sone(click: (s){
               playAudio(s);
             },isPlaying: isPlaying,pause: pauseAudio,),
